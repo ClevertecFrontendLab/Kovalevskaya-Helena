@@ -1,0 +1,27 @@
+
+
+.wrapper {
+    display:grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+
+      "img img img bk bk bk bk bk bk"
+      "img img img desc desk desk desk desk desk";
+}
+
+.image {
+    width:445px;
+    height: 593px;
+    grid-area:img;
+
+}
+
+.book {
+    grid-area:bk;
+
+}
+
+.description {
+    grid-area:desc;
+}

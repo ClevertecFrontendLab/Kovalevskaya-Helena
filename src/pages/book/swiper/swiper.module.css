@@ -1,0 +1,118 @@
+.active {
+    border:3px solid rgb(248,114,13)
+}
+
+.slider {
+    padding-top: 17px;
+}
+
+.img {
+    width:445px;
+    height: 593px;
+}
+
+@media(width <= 1100px){
+    .img {
+        width:300px;
+        height: 450px;
+    }
+
+}
+
+@media(width <= 768px){
+    .img {
+        width:136px;
+        height: 198px;
+    }
+
+}
+
+@media(width <= 569px){
+    .img {
+        width:188px;
+        height: 259px;
+    }
+
+}
+
+.cover {
+    width:445px;
+    height: 593px;
+}
+
+@media(width <= 1100px){
+    .cover {
+       width: 300;
+       height: auto;
+    }
+
+}
+
+@media(width <= 569px){
+    .cover {
+        width:188px;
+        height: 259px;
+        margin-inline: auto;
+        padding-bottom: 16px;
+    }
+
+}
+
+.img {
+    padding-bottom: 30px !important;
+    box-sizing: content-box;
+}
+
+.img .bulletActive {
+    background-color: #363636;
+    opacity: 1;
+}
+
+.img .pagination {
+    top: 203px !important;
+}
+
+@media (width <=568px) {
+    .img .pagination {
+        top: 258px !important;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.mySwiperMain {
+    height: 85%;
+    width: 100%;
+}
+
+.slide {
+    background-color: red;
+}
+
+.mySwiper {
+    height: 13%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin: 17px 0;
+  }
+
+.mySwiper .thumbActive {
+    border:3px solid rgb(248,114,13)
+}
+
+.slideCover {
+    margin: 0 auto;
+    height: 86px;
+}
+

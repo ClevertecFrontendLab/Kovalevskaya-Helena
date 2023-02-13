@@ -1,0 +1,18 @@
+.button {
+    cursor: pointer;
+}
+
+@media (width<=374px){
+    .button{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.buttonActive path {
+    fill: white
+}
+
+.buttonActive circle {
+    fill: #F85908;
+}
