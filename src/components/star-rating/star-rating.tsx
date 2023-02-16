@@ -7,7 +7,7 @@ import css from './star.module.css'
 
 
 interface StarRatingProps {
-    rating: number;
+    rating: number | null;
     className?: string;
 }
 

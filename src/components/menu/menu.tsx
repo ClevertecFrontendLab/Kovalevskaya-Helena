@@ -1,9 +1,12 @@
 import { type FC, useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import cn from 'classnames';
 import { ReactComponent as ArrowIcon } from 'images/arrow_button.svg';
-import { menuList } from 'mocks';
+import { actionsCategories, selectorsCategories } from 'store/menu';
+import type { AppDispatch } from 'store/store';
 
+// добавить лоадеры
 import css from './menu.module.css'
 
 interface MenuProps {
@@ -24,9 +27,16 @@ export const Menu: FC<MenuProps> = ({ className, testId, testBooksId, testTermsI
     const listRef = useRef<HTMLUListElement>(null);
     const [height, setHeight] = useState(0);
 
+    const items = useSelector(selectorsCategories.getCategories);
+    const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(() => {
+        dispatch(actionsCategories.getCategoriesThunk())
+    }, [dispatch])
+
     useEffect(() => {
         setHeight((isMenuOpen && listRef.current) ? listRef.current.clientHeight : 0);
-    }, [isMenuOpen, listRef]);
+    }, [isMenuOpen, listRef, items]);
 
     useEffect(() => {
         setIsMenuOpen(shouldBeOpened(pathname));
@@ -57,10 +67,10 @@ export const Menu: FC<MenuProps> = ({ className, testId, testBooksId, testTermsI
                         <li className={css.item}>
                             <Link onClick={onLinkClick} to="/" data-test-id={testBooksId} className={cn(css.link, { [css.linkActive]: pathname === '/' })}>Все книги</Link>
                         </li>
-                        {menuList.map((item) =>
+                        {items.map((item) =>
                             <li className={css.item} key={item.id}>
-                                <Link onClick={onLinkClick} to={`/books/${item.category}`} className={cn(css.link, { [css.linkActive]: category === item.category })}>
-                                    {item.label}<span className={css.count}>{item.count}</span>
+                                <Link onClick={onLinkClick} to={`/books/${item.path}`} className={cn(css.link, { [css.linkActive]: category === item.path })}>
+                                    {item.name}<span className={css.count}>{item.count}</span>
                                 </Link>
                             </li>)}
                     </ul>

@@ -4,7 +4,7 @@ import { StarRating } from 'components/star-rating'
 import css from './rating.module.css'
 
 interface RatingProps {
-    rating: number;
+    rating: number | null;
 }
 
 export const Rating: FC<RatingProps> = ({ rating }) => (

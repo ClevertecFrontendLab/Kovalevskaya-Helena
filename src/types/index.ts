@@ -1,12 +1,14 @@
 export interface Book {
     id: number;
-    img: string | null;
-    label: string;
+    image: {
+        url:string;
+    };
+    title: string;
     rating: number;
     description:string;
     bookingData: string | null;
-    author: string[];
-    publishing:string;
+    authors: string[];
+    issueYear:string;
     pages:number;
     cover:string;
     format:string;
@@ -17,15 +19,32 @@ export interface Book {
     publishedYear: number;
     images: string[];
     isReserved: boolean;
-    category: string;
+    categories: string [];
+    booking:{
+        id:number;
+        order:boolean;
+        dateOrder:string;
+        customerId:number;
+        customerFirstName:string;
+        customerLastName:string;
+    };
+    delivery:{
+        id:number;
+        handed:boolean;
+        dateHandedFrom:string;
+        dateHandedTo:string;
+        recipientId:number;
+        recipientFirstName:string;
+        recipientLastName:string;
+    };
 }
 
 
 export interface Menu {
     id: number;
-    category:string;
-    label: string;
-    count:number| null;
+    path:string;
+    name: string;
+    count:number;
 }
 
 export interface User {

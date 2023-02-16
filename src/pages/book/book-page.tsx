@@ -1,8 +1,12 @@
 import { type FC, Fragment, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { PageContainer } from 'components/common';
-import { books, menuList } from 'mocks';
+import { ErrorAlert } from 'components/common/error';
+import { Loader } from 'components/common/loader';
 import { BreadCrumb } from 'pages/book/breadcrumb';
+import { actionsGetBook, selectorsBook } from 'store/book';
+import type { AppDispatch } from 'store/store';
 
 import { BookCard } from './book-card';
 import { Description } from './description';
@@ -13,31 +17,36 @@ import { Reviews } from './reviews';
 export const BookPage: FC = () => {
     const { bookId } = useParams();
 
-    const navigate = useNavigate();
+    const dispatch = useDispatch<AppDispatch>();
 
-    const book = books.find(({ id }) => String(id) === bookId);
+    const book = useSelector(selectorsBook.getBook);
+    const loading = useSelector(selectorsBook.getIsLoading);
+    const loaded = useSelector(selectorsBook.getIsLoaded);
+    const error = useSelector(selectorsBook.getIsError);
 
     useEffect(() => {
-        if (!book) navigate('/');
-    }, [book, navigate]);
+        dispatch(actionsGetBook.getBookThunk((Number(bookId))));
+    }, [bookId, dispatch]);
 
     if (!book) {
-        navigate('/');
-
-        return null;
+        return <h1>ЗагрузОчка</h1>;
     }
 
     return (
         <Fragment>
-            <BreadCrumb menuItem={menuList[1]} book={book} />
-            <PageContainer>
-                <section className='book-page'>
-                    <BookCard book={book} />
-                    <Rating rating={book.rating} />
-                    <Description book={book} />
-                    <Reviews />
-                </section>
-            </PageContainer>
+            <BreadCrumb />
+            {loading && <Loader />}
+            {error && <ErrorAlert />}
+            {loaded &&
+                <PageContainer>
+                    <section className='book-page'>
+                        <BookCard book={book} />
+                        <Rating rating={book.rating} />
+                        <Description book={book} />
+                        <Reviews />
+                    </section>
+                </PageContainer>
+            }
         </Fragment>
     )
 };

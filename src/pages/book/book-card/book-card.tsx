@@ -1,6 +1,6 @@
 import { type FC } from 'react';
+import { type FullBook } from 'api/types';
 import { BookButton } from 'components/book-card/book-button';
-import { type Book } from 'types';
 
 import { Slider } from '../swiper/swiper';
 
@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 interface BookCardProps {
-    book: Book;
+    book: FullBook;
 }
 
 
@@ -22,9 +22,9 @@ export const BookCard: FC<BookCardProps> = ({ book }) => (
         </div>
         <div className={css.book}>
 
-            <h3 className={css.label}>{book.label}</h3>
+            <h3 className={css.label}>{book.title}</h3>
             <h4 className={css.author}>
-                <div>{book.author.join(', ')}, {book.publishedYear}</div>
+                <div>{book.authors.join(', ')}, {book.issueYear}</div>
             </h4>
             <BookButton className={css.button} book={book} />
         </div>

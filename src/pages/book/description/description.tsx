@@ -1,12 +1,12 @@
 import { type FC } from 'react'
-import { type Book } from 'types';
+import { type FullBook } from 'api/types';
 
 import css from './description.module.css'
 
 
 
 interface DescriptionProps {
-    book: Book;
+    book: FullBook;
 }
 
 export const Description: FC<DescriptionProps> = ({ book }) => <div className={css.container}>
@@ -16,11 +16,11 @@ export const Description: FC<DescriptionProps> = ({ book }) => <div className={c
         <div className={css.left}>
             <div className={css.box}>
                 <span className={css.subtitle}>Издательство</span>
-                <span className={css.text}>{book.publishing}</span>
+                <span className={css.text}>{book.producer}</span>
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>Год издания</span>
-                <span className={css.text}>{book.publishedYear}</span>
+                <span className={css.text}>{book.issueYear}</span>
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>Страниц</span>
@@ -39,7 +39,7 @@ export const Description: FC<DescriptionProps> = ({ book }) => <div className={c
         <div className={css.right}>
             <div className={css.box}>
                 <span className={css.subtitle}>Жанр</span>
-                <span className={css.text}>{book.genre}</span>
+                <span className={css.text}>{book.categories.join(', ')}</span>
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>Вес</span>
@@ -47,7 +47,7 @@ export const Description: FC<DescriptionProps> = ({ book }) => <div className={c
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>ISBN</span>
-                <span className={css.text}>{book.isbn}</span>
+                <span className={css.text}>{book.ISBN}</span>
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>Изготовитель</span>

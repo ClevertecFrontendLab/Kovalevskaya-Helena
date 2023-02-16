@@ -1,26 +1,26 @@
 import { type FC } from 'react';
+import { type Book } from 'api/types';
 import cn from 'classnames'
-import { type Book } from 'types';
 
 import { convertDate } from './utils';
 
 import css from './book-card.module.css';
 
 interface BookProps {
-    book: Book;
+    book: Pick<Book, 'booking'>;
     className?: string;
 }
 
 export const BookButton: FC<BookProps> = ({ book, className }) => {
     let label = '';
 
-    if (book.isReserved) {
+    if (book.booking?.dateOrder) {
+        label = `Занята до ${convertDate(book.booking.dateOrder)}`
+    } else if (book.booking) {
         label = 'Забронирована'
-    } else if (book.bookingData) {
-        label = `Занята до ${convertDate(book.bookingData)}`
     } else {
         label = 'Забронировать'
     }
 
-    return <button className={cn(css.button, { [css.isBooked]: book.isReserved }, { [css.isBookedUntil]: book.bookingData }, className)} type='button'>{label}</button>
+    return <button className={cn(css.button, { [css.isBooked]: book.booking, [css.isBookedUntil]: book.booking?.dateOrder }, className)} type='button'>{label}</button>
 }

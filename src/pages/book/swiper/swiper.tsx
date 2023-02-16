@@ -14,10 +14,10 @@ import 'swiper/css/thumbs';
 
 
 interface SliderProps {
-    images: string[];
+    images: Array<{ url: string }>;
 }
 
-export const BigSlider: FC<SliderProps> = ({ images }) => {
+export const BigSlider: FC<{ images: string[] }> = ({ images }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<TSwiper | null>(null);
 
     return (
@@ -52,7 +52,9 @@ export const BigSlider: FC<SliderProps> = ({ images }) => {
 }
 
 
-export const Slider: FC<SliderProps> = ({ images }) => {
+export const Slider: FC<SliderProps> = ({ images: rawImages }) => {
+    const images = rawImages.map(({ url }) => `https://strapi.cleverland.by${url}`);
+
     const mainImage = images[0] ?? Plug;
 
     const { sm, sx } = useMedia();
