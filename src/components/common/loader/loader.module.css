@@ -32,7 +32,25 @@
     }
 }
 
+@media(width <= 768px){
+    .loader{
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media(width <= 320px){
+    .loader{
+        width: 22px;
+        height: 22px;
+        border: 3px solid rgb(248,89,8);
+        border-bottom-color: transparent;
+        border-radius:50%;
+    }
+}
+
 .scroll {
     overflow: hidden;
 }
+
 

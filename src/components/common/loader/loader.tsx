@@ -12,7 +12,7 @@ export const Loader: FC = () => {
         };
     })
 
-    return ReactDOM.createPortal(<div className={css.wrapper}>
+    return ReactDOM.createPortal(<div className={css.wrapper} data-test-id='loader'>
         <span className={css.loader} />
     </div>, document.body);
 }

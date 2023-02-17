@@ -16,7 +16,7 @@ export const Description: FC<DescriptionProps> = ({ book }) => <div className={c
         <div className={css.left}>
             <div className={css.box}>
                 <span className={css.subtitle}>Издательство</span>
-                <span className={css.text}>{book.producer}</span>
+                <span className={css.text}>{book.publish}</span>
             </div>
             <div className={css.box}>
                 <span className={css.subtitle}>Год издания</span>

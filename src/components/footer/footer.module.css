@@ -10,7 +10,8 @@
     justify-content: space-between;
     align-items: center;
 }
-@media (width <=700px) {
+
+@media (width <= 700px) {
     .wrapper {
         flex-direction: column;
         padding-bottom: 11px;
@@ -20,13 +21,15 @@
 .inner {
     padding: 19px 0;
 }
-@media (width <=700px) {
+
+@media (width <= 700px) {
     .inner {
         display: flex;
         flex-direction: column;
         padding: 16px 0;
     }
 }
+
 .info {
     font-family: 'Montserrat',sans-serif;
     font-style: normal;
@@ -36,11 +39,12 @@
     letter-spacing: 0.1px;
     color: #363636;
 }
-@media (width <=320px) {
+
+@media (width <= 320px) {
     .info {
     font-size: 15px;
     line-height: 20px;
-    }
+  }
 }
 
 .social {

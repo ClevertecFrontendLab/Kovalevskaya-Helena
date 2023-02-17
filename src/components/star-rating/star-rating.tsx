@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import { type FC } from 'react';
 import cn from 'classnames';
 
 import { Star } from './star';

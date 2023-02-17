@@ -8,7 +8,7 @@
     color: #363636;
     margin-bottom: 32px;
 }
-@media (width<=320px) {
+@media (width <= 320px) {
     .title {
         font-size: 18px;
         line-height: 28px;

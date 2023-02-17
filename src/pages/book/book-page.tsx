@@ -1,9 +1,8 @@
 import { type FC, Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { PageContainer } from 'components/common';
+import { Loader, PageContainer } from 'components/common';
 import { ErrorAlert } from 'components/common/error';
-import { Loader } from 'components/common/loader';
 import { BreadCrumb } from 'pages/book/breadcrumb';
 import { actionsGetBook, selectorsBook } from 'store/book';
 import type { AppDispatch } from 'store/store';
@@ -28,22 +27,20 @@ export const BookPage: FC = () => {
         dispatch(actionsGetBook.getBookThunk((Number(bookId))));
     }, [bookId, dispatch]);
 
-    if (!book) {
-        return <h1>ЗагрузОчка</h1>;
-    }
+
 
     return (
         <Fragment>
             <BreadCrumb />
             {loading && <Loader />}
             {error && <ErrorAlert />}
-            {loaded &&
+            {(loaded && book) &&
                 <PageContainer>
                     <section className='book-page'>
                         <BookCard book={book} />
                         <Rating rating={book.rating} />
                         <Description book={book} />
-                        <Reviews />
+                        <Reviews comments={book.comments} />
                     </section>
                 </PageContainer>
             }

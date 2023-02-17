@@ -1,12 +1,16 @@
 import { type FC, useRef, useState } from 'react';
+import { type Comments } from 'api/types';
 import cn from 'classnames'
 import { StarRating } from 'components/star-rating';
 import arrowButton from 'images/arrow_button.svg'
-import { reviews } from 'mocks';
 
 import css from './reviews.module.css'
 
-export const Reviews: FC = () => {
+interface ReviewProps {
+    comments: Comments[] | null;
+}
+
+export const Reviews: FC<ReviewProps> = ({ comments }) => {
     const [open, setOpen] = useState(false);
     const listRef = useRef<HTMLUListElement>(null);
 
@@ -32,7 +36,7 @@ export const Reviews: FC = () => {
             <div className={css.header} >
                 <div className={css.box}>
                     <span className={css.title}>Отзывы</span>
-                    <span className={css.count}>{reviews.length}</span>
+                    <span className={css.count}>{comments ? comments.length : 0}</span>
                 </div>
                 { /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role */}
                 <img data-test-id='button-hide-reviews' className={cn(css.arrow, { [css.arrowOpen]: open })} onKeyDown={onKeyDown} src={arrowButton} onClick={onToggleButton} alt='arrow button' role="button" tabIndex={0} />
@@ -41,20 +45,20 @@ export const Reviews: FC = () => {
             <hr className={css.separator} />
             <div className={cn(css.list)} style={listStyles}>
                 <ul ref={listRef}>
-                    {reviews.map((item) => <li className={css.item} key={item.id}>
+                    {comments && comments.map((comment) => <li className={css.item} key={comment.id}>
                         <div className={css.container}>
                             <div className={css.header}>
                                 <div className={css.subheader}>
-                                    <img src={item.avatar} alt='avatar' />
+                                    <img src={comment.user.avatarUrl} alt='avatar' />
                                     <div className={css.info}>
-                                        <span>{item.name} {item.surname}</span>
-                                        <span>{item.date}</span>
+                                        <span>{comment.user.firstName} {comment.user.lastName}</span>
+                                        <span>{comment.createdAt}</span>
                                     </div>
                                 </div>
-                                <StarRating className={css.starRating} rating={item.rating} />
+                                <StarRating className={css.starRating} rating={comment.rating} />
                             </div>
                             <div className={css.review}>
-                                {item.review}
+                                {comment.text}
                             </div>
                         </div>
                     </li>

@@ -23,10 +23,75 @@
     transition:top 0.2s ease-in-out;
 }
 
+@media (width <= 768px) {
+    .container{
+        width: 84vw;
+        left:8vw;
+        height: 72px;
+    }
+}
+
+@media (width <= 540px) {
+    .container{
+        padding-inline-start: 19px;
+        padding-inline-end: 19px;
+    }
+}
+
+@media (width <= 395px) {
+    .container{
+        height: 78px;
+    }
+}
+
+@media (width<=320px) {
+    .container{
+        width: 90vw;
+        left: 5vw;
+    }
+}
+
+@media (width <= 540px) {
+    .dangerous, .cross {
+        align-self: flex-start;
+        margin-top: 15px;
+    }
+}
+
+@media (width <= 395px) {
+    .dangerous {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (width <= 640px) {
+    .cross{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (width <= 395px) {
+    .cross{
+        height: 10px;
+    }
+}
+
 .text{
    flex-grow: 1;
    padding-left: 28px;
 }
+
+@media (width <= 540px) {
+    .text {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 18px;
+    }
+}
+
 .close {
     top:-150px;
 }

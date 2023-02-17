@@ -41,7 +41,7 @@ interface User {
 
 }
 
-interface Comments {
+export interface Comments {
     id: number,
     rating: number,
     text: string,

@@ -12,7 +12,6 @@
     letter-spacing: 0.1px;
     color: #363636;
     padding-top: 42px;
-
 }
 
 @media ( width <= 1100px) {
@@ -35,8 +34,7 @@
     }
 }
 
-
-@media (width<=570px) {
+@media (width <= 570px) {
     .wrapper {
         grid-template-columns:auto;
         grid-template-areas:
@@ -65,7 +63,6 @@
     }
 }
 
-
 @media (width<=570px) {
     .book {
         gap:8px;
@@ -77,13 +74,13 @@
     padding-top: 32px;
 }
 
-@media (width<=1100px) {
+@media (width <= 1100px) {
     .description {
         padding-top: 26px;
     }
 }
 
-@media (width<=568px) {
+@media (width <= 568px) {
     .description {
         padding-top: 42px;
     }
@@ -94,14 +91,14 @@
     line-height: 40px;
 }
 
-@media (width<=1100px) {
+@media (width <= 1100px) {
     .label {
         font-size: 24px;
         line-height: 30px;
     }
 }
 
-@media (width <=570px) {
+@media (width <= 570px) {
     .label {
         font-size: 18px;
         line-height: 28px;
@@ -115,14 +112,14 @@
     padding-bottom: 8px;
 }
 
-@media (width<=1100px) {
+@media (width <= 1100px) {
     .author {
         font-size: 14px;
         line-height: 18px;
     }
 }
 
-@media (width<=570px) {
+@media (width <= 570px) {
     .author {
         font-weight: 400;
         font-size: 12px;
@@ -137,26 +134,26 @@
     line-height: 150%;
 }
 
-@media (width<=1100px) {
+@media (width <= 1100px) {
     .button {
         width: 306px;
         height: 52px;
     }
 }
 
-@media (width<=825px) {
+@media (width <= 825px) {
     .button {
         width: 240px;
     }
 }
 
-@media (width<=825px) {
+@media (width <= 825px) {
     .button {
         width: 306px;
     }
 }
 
-@media (width<=570px) {
+@media (width <= 570px) {
     .button {
         font-weight: 600;
         font-size: 12px;
@@ -166,7 +163,7 @@
     }
 }
 
-@media (width<=350px) {
+@media (width <= 350px) {
     .button {
         width: 260px;
         height: 40px;
@@ -179,14 +176,14 @@
     margin-bottom: 32px;
 }
 
-@media (width<=1100px) {
+@media (width <= 1100px) {
     .about {
         font-size: 16px;
         line-height: 24px;
     }
 }
 
-@media (width<=570px) {
+@media (width <= 570px) {
     .about {
         font-size: 18px;
         line-height: 28px;
@@ -199,7 +196,7 @@
     line-height: 24px;
 }
 
-@media (width <=570px){
+@media (width <= 570px){
     .text {
         font-size: 12px;
         line-height: 18px;
@@ -210,7 +207,7 @@
     margin-bottom: 30px;
 }
 
-@media (width <=570px){
+@media (width <= 570px){
     .paragraph {
         margin-bottom: unset;
     }

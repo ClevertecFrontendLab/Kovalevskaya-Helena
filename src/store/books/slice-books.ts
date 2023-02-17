@@ -8,7 +8,7 @@ import { LoadStatuses } from '../../constants';
 
 const sliceName = 'books';
 
-const getBooksThunk = createAsyncThunk(sliceName,getBooks);
+const getBooksThunk = createAsyncThunk(sliceName, getBooks);
 
 export interface State {
     books: Book[];

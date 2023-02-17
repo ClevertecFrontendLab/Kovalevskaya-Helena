@@ -31,7 +31,6 @@ export const BookList: FC = () => {
     const books = useSelector(selectorsBooks.getBooks);
     const dispatch = useDispatch<AppDispatch>();
     const loading = useSelector(selectorsBooks.getIsLoading);
-    const loaded = useSelector(selectorsBooks.getIsLoaded);
     const error = useSelector(selectorsBooks.getIsError);
 
     useEffect(() => {

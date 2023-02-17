@@ -45,6 +45,7 @@
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
+
 .line::before {
     display: block;
     content: "";
@@ -55,8 +56,8 @@
     background-color: #363636;
     border-radius: 5px;
     transition:  all 0.3s ease-in-out;
-
 }
+
 .isVisible {
     height: 0px;
 }
@@ -83,6 +84,7 @@
         align-items: center;
     }
 }
+
 @media (width <= 320px) {
     .burger {
         display: block;
@@ -105,7 +107,6 @@
 }
 
 @media (width <= 610px){
-
     .menuBurger{
         width: 288px;
         left: -350px;
@@ -115,7 +116,7 @@
 .isActive {
     left: 8vw;
 }
-@media (width <=320px) {
+@media (width <= 320px) {
     .isActive {
         left: 5vw;
     }

@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-@media (width<=494px) {
+@media (width <= 494px) {
     .container {
         gap:unset;
     }

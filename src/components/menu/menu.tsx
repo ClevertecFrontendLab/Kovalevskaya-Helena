@@ -6,7 +6,6 @@ import { ReactComponent as ArrowIcon } from 'images/arrow_button.svg';
 import { actionsCategories, selectorsCategories } from 'store/menu';
 import type { AppDispatch } from 'store/store';
 
-// добавить лоадеры
 import css from './menu.module.css'
 
 interface MenuProps {

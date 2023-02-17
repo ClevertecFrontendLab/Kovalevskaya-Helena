@@ -9,7 +9,7 @@
     padding-bottom: 62px;
 }
 
-@media (width<=768px) {
+@media (width <= 768px) {
     .container {
         font-size: 16px;
         line-height: 24px;
@@ -17,7 +17,7 @@
     }
 }
 
-@media (width<=768px) {
+@media (width <= 768px) {
     .container {
         font-size: 16px;
         line-height: 24px;
@@ -25,14 +25,14 @@
         padding-bottom: 28px;
     }
 }
-@media (width<=320px) {
+@media (width <= 320px) {
     .container {
         font-size: 18px;
         line-height: 28px;
         margin-top: 42px;
     }
 }
-@media (width<=768px) {
+@media (width <= 768px) {
     .counter {
         font-size: 18px;
         line-height: 28px;
@@ -44,7 +44,7 @@
     gap:26px;
 }
 
-@media (width <=320px) {
+@media (width <= 320px) {
     .box {
         margin-top: 19px;
     }
@@ -62,9 +62,9 @@
         width: 306px;
         border: 1px solid #EBEBEB;
     }
-    }
+}
 
-@media ( width <=320px) {
+@media ( width <= 320px) {
     .separator {
         display: none;
     }

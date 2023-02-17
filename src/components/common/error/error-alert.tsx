@@ -14,11 +14,11 @@ export const ErrorAlert: FC = () => {
         setCloseError((prevState) => !prevState)
     }
 
-    return ReactDOM.createPortal(<div className={cn(css.container, { [css.close]: closeError })}>
-        <img src={dangerous} alt='dangerous' />
+    return ReactDOM.createPortal(<div className={cn(css.container, { [css.close]: closeError })} data-test-id='error'>
+        < img className={css.dangerous} src={dangerous} alt='dangerous' />
         <div className={css.text}>Что-то пошло не так. Обновите страницу через некоторое время.</div>
-        <div onClick={onCloseError} onKeyDown={onCloseError} role='button' tabIndex={0}>
+        <div className={css.cross} onClick={onCloseError} onKeyDown={onCloseError} role='button' tabIndex={0}>
             <img src={cross} alt='cross' />
         </div>
-    </div>, document.body)
+    </div >, document.body)
 }

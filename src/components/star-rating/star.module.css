@@ -3,7 +3,7 @@
     gap: 10px;
 }
 
-@media (width <=320px) {
+@media (width <= 320px) {
     .starRating {
         gap:19px;
     }
@@ -13,7 +13,7 @@
     fill: rgb(255, 188, 31);
 }
 
-@media (width <=320px) {
+@media (width <= 320px) {
     .star {
         width: 27px;
         height: 27px;

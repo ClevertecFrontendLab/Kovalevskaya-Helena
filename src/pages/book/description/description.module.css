@@ -7,13 +7,13 @@
     padding-bottom: 62px;
 }
 
-@media (width<=960px) {
+@media (width <= 960px) {
     .container {
         padding-bottom: 52px;
     }
 }
 
-@media (width<=650px) {
+@media (width <= 650px) {
     .container {
         padding-bottom: 42px;
     }
@@ -25,11 +25,12 @@
 
 }
 
-@media (width <=650px) {
+@media (width <= 650px) {
     .inner {
         flex-direction: column;
     }
 }
+
 .left, .right {
     flex-grow:1;
     flex-basis:50%;
@@ -46,7 +47,6 @@
     color: #363636;
 }
 
-
 .subtitle {
     font-family: 'Montserrat';
     font-style: normal;
@@ -59,7 +59,7 @@
     flex-basis: 120px;
 }
 
-@media (width<=960px) {
+@media (width <= 960px) {
     .subtitle {
         font-size: 14px;
         line-height: 18px;
@@ -68,12 +68,13 @@
     }
 }
 
-@media (width<=650px) {
+@media (width <= 650px) {
     .subtitle {
         font-size: 12px;
         line-height: 16px;
     }
 }
+
 .text {
     font-family: 'Montserrat';
     font-style: normal;
@@ -84,19 +85,17 @@
     color: #363636;
 }
 
-@media (width<=960px) {
+@media (width <= 960px) {
     .text {
         font-size: 14px;
         line-height: 18px;
     }
 }
 
-@media (width<=650px) {
+@media (width <= 650px) {
     .text {
         font-size: 12px;
         line-height: 16px;
-
-
     }
 }
 
@@ -106,7 +105,7 @@
     gap: 70px;
 }
 
-@media (width<=960px) {
+@media (width <= 960px) {
     .box {
         gap:33px;
     }

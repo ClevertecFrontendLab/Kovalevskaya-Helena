@@ -1,8 +1,8 @@
 import {combineReducers,configureStore} from '@reduxjs/toolkit';
 
+import { bookReducer } from './book';
 import { booksReducer } from './books';
 import { menuReducer } from './menu';
-import { bookReducer } from './book';
 
 export const rootReducer = combineReducers ({
     menu: menuReducer,
