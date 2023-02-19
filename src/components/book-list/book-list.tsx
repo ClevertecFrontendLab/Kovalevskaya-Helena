@@ -32,6 +32,7 @@ export const BookList: FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const loading = useSelector(selectorsBooks.getIsLoading);
     const error = useSelector(selectorsBooks.getIsError);
+    const loaded = useSelector(selectorsBooks.getIsLoaded);
 
     useEffect(() => {
         dispatch(actionGetBooks.getBooksThunk())
@@ -43,7 +44,7 @@ export const BookList: FC = () => {
         <Fragment>
             {loading && <Loader />}
             {error && <ErrorAlert />}
-            <div className={css.container}>
+            {loaded && <div className={css.container}>
                 <div className={css.header}>
                     <div className={css.box}>
                         <Search onSearchStart={() => setIsSearchVisible(true)} isVisible={isSearchVisible} onSearchCancel={() => setIsSearchVisible(false)} />
@@ -69,6 +70,7 @@ export const BookList: FC = () => {
                     })}
                 </ul>
             </div>
+            }
         </Fragment>
     )
 }

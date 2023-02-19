@@ -12,7 +12,7 @@ export const BreadCrumb: FC = () => {
     const menu = useSelector(selectorsCategories.getCategories);
     const { category } = useParams();
 
-    const categoryLabel = menu.find(({ path }) => path === category)?.name;
+    const categoryLabel = category === 'all' ? 'Все книги' : menu.find(({ path }) => path === category)?.name;
 
     return (
         <div className={css.container}>
