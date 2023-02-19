@@ -1,0 +1,64 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:28px;
+    width: 100%;
+}
+
+@media (width <= 494px) {
+    .container {
+        gap:unset;
+    }
+}
+
+.column {
+    overflow: hidden;
+}
+
+.column-span-1 {
+    grid-column: span 1;
+}
+
+.column-span-2 {
+    grid-column: span 2;
+}
+
+.column-span-3 {
+    grid-column: span 3;
+}
+
+.column-span-4 {
+    grid-column: span 4;
+}
+
+.column-span-5 {
+    grid-column: span 5;
+}
+
+.column-span-6 {
+    grid-column: span 6;
+}
+
+.column-span-7 {
+    grid-column: span 7;
+}
+
+.column-span-8 {
+    grid-column: span 8;
+}
+
+.column-span-9 {
+    grid-column: span 9;
+}
+
+.column-span-10 {
+    grid-column: span 10;
+}
+
+.column-span-11 {
+    grid-column: span 11;
+}
+
+.column-span-12 {
+    grid-column: span 12;
+}

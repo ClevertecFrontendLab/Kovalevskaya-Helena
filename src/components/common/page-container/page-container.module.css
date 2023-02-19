@@ -1,0 +1,17 @@
+.container {
+    width: 77vw;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+@media (width <= 768px) {
+    .container{
+        width: 84vw;
+    }
+}
+
+@media (width <= 320px) {
+    .container{
+        width: 90vw;
+    }
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 47px;
+}
+
+.allBooksLink {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #363636;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow {
+    transform: translateY(-5px) rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+:where(.allBooksLink:hover, .arrowActive) path {
+    fill:#f8650a
+}
+
+.arrowOpen {
+    transform: rotate(0);
+}
+
+.line {
+    width: 255px;
+    border: none;
+    background-color: #363636;
+    color:#363636;
+    height: 1px;
+    margin-left: 0;
+}
+
+.navigation {
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.list {
+    padding-left: 20px;
+    list-style-type: none;
+}
+@media (width <= 1050px){
+    .list {
+        padding-left: unset;
+    }
+}
+
+.item {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: #363636;
+    cursor: pointer;
+}
+
+@media (width <= 945px) {
+    .item {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.count {
+    font-size: 14px;
+    color: #A7A7A7;
+    padding-left: 6px;
+}
+
+.allBooksLink:hover,
+.link:hover,
+.linkActive  {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.linkActiveUnderline {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    border-bottom: 1px solid #f8650a
+}
+
+.linkBold {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #363636;
+    margin-top: 42px;
+}
+

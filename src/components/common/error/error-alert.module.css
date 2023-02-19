@@ -1,0 +1,97 @@
+.container {
+    position: fixed;
+    top:68px;
+    left:11.5vw;
+    width: 77vw;
+    height: 80px;
+    z-index: 100000;
+    background: #FEEBEA;
+    border: 1.5px solid #F42C4F;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #363636;
+    padding-inline-start: 32px;
+    padding-inline-end: 37px;
+    transition:top 0.2s ease-in-out;
+}
+
+@media (width <= 768px) {
+    .container{
+        width: 84vw;
+        left:8vw;
+        height: 72px;
+    }
+}
+
+@media (width <= 540px) {
+    .container{
+        padding-inline-start: 19px;
+        padding-inline-end: 19px;
+    }
+}
+
+@media (width <= 395px) {
+    .container{
+        height: 78px;
+    }
+}
+
+@media (width<=320px) {
+    .container{
+        width: 90vw;
+        left: 5vw;
+    }
+}
+
+@media (width <= 540px) {
+    .dangerous, .cross {
+        align-self: flex-start;
+        margin-top: 15px;
+    }
+}
+
+@media (width <= 395px) {
+    .dangerous {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (width <= 640px) {
+    .cross{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (width <= 395px) {
+    .cross{
+        height: 10px;
+    }
+}
+
+.text{
+   flex-grow: 1;
+   padding-left: 28px;
+}
+
+@media (width <= 540px) {
+    .text {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 18px;
+    }
+}
+
+.close {
+    top:-150px;
+}

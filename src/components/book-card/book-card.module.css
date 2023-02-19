@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:190px;
+    height: 470px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+@media (width<=494px) {
+    .wrapper{
+        width:288px
+    }
+}
+
+.listWrapper {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    padding: 24px 24px 24px 16px;
+    min-height: 218px;
+    height: unset;
+}
+
+@media (width<=768px) {
+    .listWrapper{
+        height: unset;
+    }
+}
+
+
+.img {
+    width: 174px;
+    height: 242px;
+    margin-inline: auto;
+}
+
+.listWrapper .img {
+    width: 120px;
+    height: 170px;
+    margin-inline: auto;
+}
+
+@media (width<=768px){
+    .listWrapper .img {
+        height: 172px;
+    }
+}
+
+@media (width<=560px) {
+    .listWrapper .img {
+        width: 70px;
+        height: 100px;
+    }
+}
+
+
+.description {
+    margin-top: 8px;
+    padding: 8px 4px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.listWrapper .description {
+    margin: 0;
+}
+
+@media (width<=560px) {
+    .listWrapper .description {
+        padding: unset;
+    }
+}
+
+.star {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #A7A7A7;
+}
+
+.listWrapper .star {
+    grid-column: span 6;
+}
+
+.label {
+    width: 174px;
+    height: 54px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+@media (width<=493px){
+    .label {
+        width: unset;
+    }
+}
+
+.listWrapper .label {
+    width: 100%;
+    height: unset;
+    grid-column: span 12;
+    order: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+
+}
+
+@media (width<=1375px) {
+    .listWrapper .label {
+        height: unset;
+    }
+
+}
+
+@media (width<=768px) {
+    .listWrapper .label {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+}
+@media (width<=560px) {
+    .listWrapper .label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.author {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #727272;
+}
+
+@media (width<=494px) {
+    .author {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.listWrapper .author {
+    grid-column: span 12;
+    order:1;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+@media (width<=560px) {
+    .listWrapper .author {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 3px;
+    }
+}
+
+.button {
+    height: 40px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (width<=494px) {
+    .button {
+        padding-left: 68px;
+        padding-right: 68px;
+
+    }
+
+}
+.listWrapper .button {
+    grid-column: span 6;
+    justify-self: flex-end;
+    padding-inline: 25px;
+
+}
+
+@media (width<=560px) {
+    .listWrapper .button {
+        margin-top: 18px;
+
+    }
+}
+
+.listWrapper .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    order:2;
+    row-gap:10px;
+}
+
+@media (width<=560px) {
+    .listWrapper .box{
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+
+.isBooked {
+    background: #FFFFFF;
+    border: 1px solid #BFC4C9;
+    color: #363636;
+}
+
+.isBookedUntil {
+    background: #FFFFFF;
+    border: 1px solid #BFC4C9;
+    color: #A7A7A7;
+
+}
+
+.publishedYear {
+    align-self: flex-end;
+}
+
+
+
+

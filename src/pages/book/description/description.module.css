@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.container {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 62px;
+}
+
+@media (width <= 960px) {
+    .container {
+        padding-bottom: 52px;
+    }
+}
+
+@media (width <= 650px) {
+    .container {
+        padding-bottom: 42px;
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@media (width <= 650px) {
+    .inner {
+        flex-direction: column;
+    }
+}
+
+.left, .right {
+    flex-grow:1;
+    flex-basis:50%;
+    flex-shrink:0;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+.subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #A7A7A7;
+    flex-shrink: 0;
+    flex-basis: 120px;
+}
+
+@media (width <= 960px) {
+    .subtitle {
+        font-size: 14px;
+        line-height: 18px;
+        flex-basis: 105px;
+
+    }
+}
+
+@media (width <= 650px) {
+    .subtitle {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+@media (width <= 960px) {
+    .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (width <= 650px) {
+    .text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.box {
+    display: flex;
+    margin-bottom:16px;
+    gap: 70px;
+}
+
+@media (width <= 960px) {
+    .box {
+        gap:33px;
+    }
+}
+
+.separator {
+    width: 350px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 0;
+}
+
+@media (width <= 960px) {
+.separator {
+        width: 306px;
+        border: 1px solid #EBEBEB;
+    }
+}
+
+@media (width <= 650px) {
+    .separator {
+        width: 209px;
+        border: 1px solid #F9F9FA;
+
+    }
+}
